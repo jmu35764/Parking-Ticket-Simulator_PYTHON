@@ -3,7 +3,13 @@ class Parked_Car:
         self.make = make
         self.model = model
         self.lic_num = lic_num
+        # initialize backing field and validate via property setter
+        self._min_parked = 0
         self.min_parked = min_parked
+
+    @property
+    def min_parked(self):
+        return self._min_parked
 
     @min_parked.setter
     def min_parked(self, value):
@@ -11,6 +17,7 @@ class Parked_Car:
             raise TypeError("Minutes parked must be an integer")
         if value < 0:
             raise ValueError("Minutes parked cannot be negative")
+        self._min_parked = value
 
 
 
@@ -22,3 +29,4 @@ class Parked_Car:
 
 
 
+        
