@@ -10,7 +10,7 @@
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>ParkingTicketSimulator</Name>
+    <Name>Parking_Ticket_Simulator</Name>
     <RootNamespace>parking-ticket-simulator</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

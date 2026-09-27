@@ -1,4 +1,4 @@
-rkclass my_class(object):
+class my_class(object):
     pass
 
 
