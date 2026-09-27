@@ -5,7 +5,7 @@ class Test_Parked_Car(unittest.TestCase):
 
     def test_min_parked(self):
         #Arrange
-        car = Parked_Car("Ford", "Mustang", "ABC123", 0)
+        car = Parked_Car()
 
         #Act
         car.min_parked = 60
