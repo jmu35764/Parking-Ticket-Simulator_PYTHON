@@ -5,7 +5,7 @@
     <ProjectGuid>ed947f5c-26a8-45c1-912f-a754c4527d4c</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>parking_ticket_simulator.py</StartupFile>
+    <StartupFile>parked_car.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
