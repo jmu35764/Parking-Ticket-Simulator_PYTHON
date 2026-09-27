@@ -1,4 +1,4 @@
-class parked_car:
+class Parked_Car:
     def __init__(self, make: str = "", model: str = "", lic_num: str = "", min_parked: int = 0):
         self.make = make
         self.model = model
