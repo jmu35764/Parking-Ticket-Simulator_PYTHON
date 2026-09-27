@@ -3,8 +3,6 @@ class Parked_Car:
         self.make = make
         self.model = model
         self.lic_num = lic_num
-        # initialize backing field and validate via property setter
-        self._min_parked = 0
         self.min_parked = min_parked
 
     @property
