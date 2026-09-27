@@ -1,10 +1,19 @@
 import unittest
 
 class Test_Parked_Car(unittest.TestCase):
-    def test_
+    def test_min_parked(self):
+        #Arrange
+        car = parked_car()
 
-class my_class(object):
-    pass
+        #Act
+        car.min_parked = 60
+
+        #Assert
+        self.assertEqual(car.min_parked, 60)
+        self.assertIsInstance(car.min_parked, int)
+
+if __name__ == '__main__':
+    unittest.main()
 
 
 
