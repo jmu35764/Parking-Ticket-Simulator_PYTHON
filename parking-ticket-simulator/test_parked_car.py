@@ -50,10 +50,11 @@ class Test_Parked_Car(unittest.TestCase):
     
         #Arrange
         car1 = Parked_Car()
+        car2 = Parked_Car()
 
         #Act and Assert
         car1.min_parked = -10
-        car1.min_parked = "sixty"
+        car2.min_parked = "sixty"
 
         """with self.assertRaises(ValueError):
             car1.min_parked = -10
