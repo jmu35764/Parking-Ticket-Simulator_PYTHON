@@ -7,10 +7,10 @@ class Test_Parked_Car(unittest.TestCase):
         #Arrange
         car = Parked_Car()
         #Act and Assert
-        self.assertEqual(car.make, "")
-        self.assertEqual(car.color, "")
-        self.assertEqual(car.model, "")
-        self.assertEqual(car.lic_num, "")
+        self.assertEqual(car.make, "make")
+        self.assertEqual(car.color, "color")
+        self.assertEqual(car.model, "model")
+        self.assertEqual(car.lic_num, "license number") 
         self.assertEqual(car.min_parked, 0) 
     
     def test_constructor(self):

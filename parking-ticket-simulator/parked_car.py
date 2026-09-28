@@ -1,5 +1,5 @@
 class Parked_Car:
-    def __init__(self, make: str = "", color: str = "", model: str = "", lic_num: str = "", min_parked: int = 0) -> None:
+    def __init__(self, make: str = "make", color: str = "color", model: str = "model", lic_num: str = "license number", min_parked: int = 0) -> None:
         self.make = make
         self.color = color
         self.model = model
