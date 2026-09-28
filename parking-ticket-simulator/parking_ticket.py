@@ -6,9 +6,10 @@ import math
 
 class Parking_Ticket:
     def __init__(self, fine: int = 0, car: Parked_Car = None, meter: Parking_Meter = None) -> None:
-        self.fine = self.SetFine()
+        #self.fine = self.SetFine()
         self.car = car
         self.meter = meter
+        self.fine = self.SetFine()
 
     def SetFine(self) -> int:
         if self.car is None or self.meter is None:
