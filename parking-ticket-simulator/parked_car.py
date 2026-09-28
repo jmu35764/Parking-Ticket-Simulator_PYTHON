@@ -18,9 +18,53 @@ class Parked_Car:
             raise ValueError("Minutes parked cannot be negative")
         self._min_parked = value
 
+    @property
+    def make(self):
+        return self._make
 
+    @make.setter
+    def make(self, value):
+        if not isinstance(value, str):
+            raise TypeError("Make must be a string")
+        if not value:
+            raise ValueError("Make cannot be empty")
+        self._make = value
 
-    
+    @property
+    def color(self):
+        return self._color
+
+    @color.setter
+    def color(self, value):
+        if not isinstance(value, str):
+            raise TypeError("Color must be a string")
+        if not value:
+            raise ValueError("Color cannot be empty")
+        self._color = value
+
+    @property
+    def model(self):
+        return self._model
+
+    @model.setter
+    def model(self, value):
+        if not isinstance(value, str):
+            raise TypeError("Model must be a string")
+        if not value:
+            raise ValueError("Model cannot be empty")
+        self._model = value
+
+    @property
+    def lic_num(self):
+        return self._lic_num
+
+    @lic_num.setter
+    def lic_num(self, value):
+        if not isinstance(value, str):
+            raise TypeError("License number must be a string")
+        if not value:
+            raise ValueError("License number cannot be empty")
+        self._lic_num = value
 
 
 
