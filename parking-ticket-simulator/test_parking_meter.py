@@ -13,3 +13,6 @@ class test_parking_meter(unittest.TestCase):
         #Assert
         self.assertEqual(meter.min_purch, 30)
         self.assertIsInstance(meter.min_purch, int)
+
+if __name__ == '__main__':
+    unittest.main()
