@@ -1,5 +1,6 @@
 from parked_car import Parked_Car
 from parking_meter import Parking_Meter
+import math
 
 class Parking_Ticket():
     
@@ -8,7 +9,9 @@ class Parking_Ticket():
         self.car = car
         self.meter = meter
 
-    
+   def SetFine(self):
+       if self.car.min_parked > self.meter.min_purch:
+           self.fine = 25 + math.ceil((self.car.min_parked - self.meter.min_purch-60) / 60) * 10
 
 
 
