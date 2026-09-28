@@ -11,8 +11,8 @@ class Parking_Ticket:
         self.meter = meter
 
     def SetFine(self) -> int:
-        if self.car is None or self.meter is None:
-            return None
+        #if self.car is None or self.meter is None:
+         #   return None
 
         over = self.car.min_parked - self.meter.min_purch
         if over <= 0:
