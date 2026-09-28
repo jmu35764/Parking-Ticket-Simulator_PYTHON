@@ -8,7 +8,7 @@ class test_parking_ticket(unittest.TestCase):
     
     def test_set_fine(self):
         # Arrange
-        car = Parked_Car("ABC123", "Toyota", "Red", 120)
+        car = Parked_Car("Toyota", "Camry", "Red", "ABC123", 120)
         meter = Parking_Meter(60)
         ticket = Parking_Ticket(0, car, meter)
 
