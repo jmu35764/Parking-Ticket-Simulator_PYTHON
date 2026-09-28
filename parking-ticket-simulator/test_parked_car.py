@@ -3,6 +3,17 @@ from parked_car import Parked_Car
 
 class Test_Parked_Car(unittest.TestCase):
 
+    def test_constructor(self):
+        #Arrange
+        car = Parked_Car("Ford", "Black", "Fusion", "123ABC", 0)
+
+        #Act and Assert
+        self.assertEqual(car.make, "Ford")
+        self.assertEqual(car.color, "Black")
+        self.assertEqual(car.model, "Fusion")
+        self.assertEqual(car.lic_num, "123ABC")
+        self.assertEqual(car.min_parked, 0)
+    
     def test_min_parked_output(self):
         #Arrange
         car = Parked_Car()
