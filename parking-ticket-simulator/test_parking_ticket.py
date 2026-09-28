@@ -17,3 +17,6 @@ class test_parking_ticket(unittest.TestCase):
         ticket.SetFine()
         # Check if the fine is calculated correctly
         self.assertEqual(ticket.fine, 35)
+
+if __name__ == '__main__':
+    unittest.main()
