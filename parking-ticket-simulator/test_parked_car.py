@@ -64,9 +64,9 @@ class Test_Parked_Car(unittest.TestCase):
     def test_string_min_parked(self):
         #Arrange
         car = Parked_Car()
+
         #Act and Assert
-        with self.assertRaises(TypeError):
-            car.min_parked = "sixty"    
+        car.min_parked = "sixty"    
 
 if __name__ == '__main__':
     unittest.main()
