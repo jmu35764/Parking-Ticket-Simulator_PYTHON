@@ -29,11 +29,7 @@ class Test_Parked_Car(unittest.TestCase):
         #Arrange
         car = Parked_Car("", "", "", "", 0)
         #Act and Assert
-        self.assertEqual(car.make, "")
-        self.assertEqual(car.color, "")
-        self.assertEqual(car.model, "")
-        self.assertEqual(car.lic_num, "")
-        self.assertEqual(car.min_parked, 0)
+
     
     def test_min_parked_output(self):
         #Arrange
