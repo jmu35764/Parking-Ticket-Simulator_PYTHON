@@ -29,6 +29,7 @@
     <Compile Include="parking_meter.py" />
     <Compile Include="parking_ticket.py" />
     <Compile Include="parking_ticket_simulator.py" />
+    <Compile Include="police_officer.py" />
     <Compile Include="test_parking_meter.py" />
     <Compile Include="test_parked_car.py" />
     <Compile Include="test_parking_ticket.py" />
