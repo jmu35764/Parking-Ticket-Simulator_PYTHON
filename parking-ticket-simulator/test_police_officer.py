@@ -18,6 +18,14 @@ class test_police_officer(unittest.TestCase):
         officer = Police_Officer("John Doe", "12345", car1, meter1)
         self.assertIsNone(officer.Inspect())
 
+    def test_one_minute_over(self):
+        car1 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 61)
+        meter1 = Parking_Meter(60)
+        officer = Police_Officer("John Doe", "12345", car1, meter1)
+        ticket = officer.Inspect()
+        self.assertIsInstance(ticket, Parking_Ticket)
+        self.assertEqual(ticket.fine, 25)
+
 
 
 
