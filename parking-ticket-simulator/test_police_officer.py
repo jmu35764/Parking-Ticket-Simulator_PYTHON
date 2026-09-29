@@ -30,7 +30,7 @@ class test_police_officer(unittest.TestCase):
         car1 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 121)
         meter1 = Parking_Meter(60)
         officer = Police_Officer("John Doe", "12345", car1, meter1)
-        ticket = officer.Inspect()
+        officer.Inspect()
         self.assertIsInstance(ticket, Parking_Ticket)
         self.assertEqual(ticket.fine, 35)
 
