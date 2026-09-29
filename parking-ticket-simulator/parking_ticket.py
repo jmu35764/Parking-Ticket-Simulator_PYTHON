@@ -24,8 +24,8 @@ class Parking_Ticket:
             self.fine = 25 + math.ceil((over-60) / 60) * 10
         return self.fine
 
-    def __str__(self) -> str:
-        return self.car
+    def report(self):
+        return self.car.list() + self.meter.list() + f"\nFine: ${self.fine}"
 
     
 
