@@ -40,7 +40,6 @@ class test_parking_ticket(unittest.TestCase):
         #Assert
         self.assertEqual(ticket.fine, 0)
 
-    def test_parked_car_info(self):
 
 if __name__ == '__main__':
     unittest.main()
