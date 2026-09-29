@@ -8,7 +8,7 @@ def main():
     car1 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 121)
     meter1 = Parking_Meter(60)
     Officer1 = Police_Officer("John Doe", "12345", car1, meter1)
-    Officer1.Inspect
+    Officer1.Inspect()
     #ticket = Parking_Ticket(0, car1, meter1, Officer1.name, Officer1.badge_number)
     #ticket.SetFine()
     #report = ticket.report()
