@@ -15,6 +15,8 @@ class Parking_Meter():
             raise ValueError("Minutes purchased cannot be negative")
         self._min_purch = value
 
+    def list(self):
+        return f"\nMinutes Purchased: {self.min_purch}"
 
 
 
