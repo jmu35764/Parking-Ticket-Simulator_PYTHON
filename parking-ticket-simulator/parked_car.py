@@ -68,8 +68,8 @@ class Parked_Car:
             raise ValueError("License number cannot be empty")
         self._lic_num = value
 
-    def __str__(self):
-        return f"Make: {self.make}\n Color: {self.color}\n Model: {self.model}\n License Number: {self.lic_num}\n Minutes Parked: {self.min_parked}"
+    def list(self):
+        return f"Make: {self.make}, Color: {self.color}, Model: {self.model}, License Number: {self.lic_num}, Minutes Parked: {self.min_parked}"
 
 #    def raise_error(self, value):
 #       if not isinstance(value, str):
