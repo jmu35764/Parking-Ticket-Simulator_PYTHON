@@ -40,6 +40,24 @@ class test_parking_ticket(unittest.TestCase):
         #Assert
         self.assertEqual(ticket.fine, 0)
 
+    def test_create_report(self):
+        # Arrange
+        car1 = Parked_Car("Toyota", "Camry", "Red", "ABC123", 121)
+        meter1 = Parking_Meter(60)
+        ticket = Parking_Ticket(0, car1, meter1)
+        ticket.SetFine()
+
+        # Act
+        report = ticket.report()
+
+        # Assert
+        self.assertIn("Make: Toyota", report)
+        self.assertIn("Color: Red", report)
+        self.assertIn("Model: Camry", report)
+        self.assertIn("License Number: ABC123", report)
+        self.assertIn("Minutes Parked: 121", report)
+        self.assertIn("Minutes Purchased: 60", report)
+        self.assertIn("Fine: $35", report)
 
 if __name__ == '__main__':
     unittest.main()
