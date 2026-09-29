@@ -22,6 +22,8 @@ class Parking_Ticket:
             self.fine = 25 + math.ceil(over / 60) * 10
         return self.fine
 
+    
+
 
 
 
