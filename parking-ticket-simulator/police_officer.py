@@ -9,13 +9,15 @@ class Police_Officer:
         self.badge_number = badge_number
         self.car = car
         self.meter = meter
+        self.report = report
         #self.ticket = Parking_Ticket(0, car, meter, name, badge_number)
 
     def Inspect(self):
         if self.car.min_parked > self.meter.min_purch:
             ticket = Parking_Ticket(0, self.car, self.meter, self.name, self.badge_number)
             ticket.SetFine()
-            return ticket.report
+            report = ticket.report
+            return report
         else:
             return None
 
