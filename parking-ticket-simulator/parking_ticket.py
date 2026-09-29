@@ -21,7 +21,7 @@ class Parking_Ticket:
         elif over > 0 and over <= 60:
             self.fine = 25
         else:
-            self.fine = 25 + math.ceil(over / 60) * 10
+            self.fine = 25 + math.ceil((over-60) / 60) * 10
         return self.fine
 
     
