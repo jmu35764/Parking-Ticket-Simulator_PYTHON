@@ -18,6 +18,8 @@ class Parking_Ticket:
         over = self.car.min_parked - self.meter.min_purch
         if over <= 0:
             self.fine = 0
+        elif over > 0 and over <= 60:
+            self.fine = 25
         else:
             self.fine = 25 + math.ceil(over / 60) * 10
         return self.fine
