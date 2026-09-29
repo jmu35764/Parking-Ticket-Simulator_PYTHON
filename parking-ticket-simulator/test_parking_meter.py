@@ -18,6 +18,11 @@ class test_parking_meter(unittest.TestCase):
         #Arrange
         '''Testing for value errror in Parking_Meter class '''
         meter = Parking_Meter(-10)
+
+    def test_string_min(self):
+        #Arrange
+        '''Testing for type error in Parking_Meter class '''
+        meter = Parking_Meter("thirty")
         
 
 if __name__ == '__main__':
