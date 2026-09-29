@@ -8,7 +8,7 @@ class test_parking_ticket(unittest.TestCase):
     
     def test_set_fine(self):
         # Arrange
-        car1 = Parked_Car("Toyota", "Camry", "Red", "ABC123", 121)
+        car1 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 121)
         meter1 = Parking_Meter(60)
         ticket = Parking_Ticket(0, car1, meter1)
 
@@ -20,7 +20,7 @@ class test_parking_ticket(unittest.TestCase):
 
     def test_over_by_one_min(self):
         #Arrange
-        car1 = Parked_Car("Honda", "Civic", "Blue", "XYZ789", 61)
+        car1 = Parked_Car("Honda", "Blue", "Civic", "XYZ789", 61)
         meter1 = Parking_Meter(60)
         ticket = Parking_Ticket(0, car1, meter1)
 
@@ -32,7 +32,7 @@ class test_parking_ticket(unittest.TestCase):
 
     def test_less_than_or_equal_to_meter(self):
         #Arrange
-        car1 = Parked_Car("Ford", "Focus", "Black", "LMN456", 30)
+        car1 = Parked_Car("Ford", "Black", "Focus", "LMN456", 30)
         meter1 = Parking_Meter(60)
         ticket = Parking_Ticket(0, car1, meter1)
         #Act
