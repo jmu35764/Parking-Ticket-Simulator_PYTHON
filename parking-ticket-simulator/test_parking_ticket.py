@@ -30,6 +30,16 @@ class test_parking_ticket(unittest.TestCase):
         # Assert
         self.assertEqual(ticket.fine, 25)
 
+    def test_less_than_or_equal_to_meter(self):
+        #Arrange
+        car1 = Parked_Car("Ford", "Focus", "Black", "LMN456", 30)
+        meter1 = Parking_Meter(60)
+        ticket = Parking_Ticket(0, car1, meter1)
+        #Act
+        ticket.SetFine()
+        #Assert
+        self.assertEqual(ticket.fine, 0)
+
 
 if __name__ == '__main__':
     unittest.main()
