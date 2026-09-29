@@ -42,7 +42,7 @@ class test_parking_ticket(unittest.TestCase):
 
     def test_create_report(self):
         # Arrange
-        car1 = Parked_Car("Toyota", "Camry", "Red", "ABC123", 121)
+        car1 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 121)
         meter1 = Parking_Meter(60)
         ticket = Parking_Ticket(0, car1, meter1)
         ticket.SetFine()
