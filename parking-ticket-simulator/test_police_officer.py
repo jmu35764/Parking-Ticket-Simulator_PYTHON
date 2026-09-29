@@ -1,7 +1,5 @@
 import unittest
-from parking_meter import Parking_Meter
-from parked_car import Parked_Car
-from parking_ticket import Parking_Ticket
+
 from police_officer import Police_Officer
 
 
