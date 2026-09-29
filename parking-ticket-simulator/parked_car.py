@@ -6,6 +6,12 @@ class Parked_Car:
         self.lic_num = lic_num
         self.min_parked = min_parked
 
+    def raise_error(self, value):
+        if not isinstance(value, str):
+            raise TypeError("Make must be a string")
+        if not value:
+            raise ValueError("Make cannot be empty")
+
     @property
     def min_parked(self):
         return self._min_parked
@@ -24,10 +30,11 @@ class Parked_Car:
 
     @make.setter
     def make(self, value):
-        if not isinstance(value, str):
-            raise TypeError("Make must be a string")
-        if not value:
-            raise ValueError("Make cannot be empty")
+#        if not isinstance(value, str):
+#            raise TypeError("Make must be a string")
+#        if not value:
+#            raise ValueError("Make cannot be empty")
+        raise_error(value)
         self._make = value
 
     @property
