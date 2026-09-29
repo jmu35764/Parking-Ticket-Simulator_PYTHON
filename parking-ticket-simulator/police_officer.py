@@ -17,6 +17,9 @@ class Police_Officer:
         else:
             return None
 
+    def list(self):
+        return f"\nOfficer Name: {self.name}\nBadge Number: {self.badge_number}"
+
 
 
 
