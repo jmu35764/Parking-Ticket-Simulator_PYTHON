@@ -6,13 +6,12 @@ import math
 
 
 class Parking_Ticket:
-    def __init__(self, fine: int = 0, car: Parked_Car = None, meter: Parking_Meter = None, officer_name: str = None, off_num: str = None) -> None:
+    def __init__(self, fine: int = 0, car: Parked_Car = None, meter: Parking_Meter = None, officer_object) -> None:
         #self.fine = self.SetFine()
         self.car = car
         self.meter = meter
         self.fine = self.SetFine()
-        self.officer_name = officer_name
-        self.off_num = off_num
+        self.officer = officer
 
     def SetFine(self) -> int:
         if self.car is None or self.meter is None:
