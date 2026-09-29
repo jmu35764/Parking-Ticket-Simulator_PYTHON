@@ -2,6 +2,7 @@ import unittest
 from parking_meter import Parking_Meter
 from parked_car import Parked_Car
 from parking_ticket import Parking_Ticket
+from police_officer import Police_Officer
 
 
 class test_parking_ticket(unittest.TestCase):
@@ -44,13 +45,16 @@ class test_parking_ticket(unittest.TestCase):
         # Arrange
         car1 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 121)
         meter1 = Parking_Meter(60)
-        ticket = Parking_Ticket(0, car1, meter1)
+        Officer1 = Police_Officer("John Doe", "12345", car1, meter1)
+        ticket = Parking_Ticket(0, car1, meter1, Officer1.name, Officer1.badge_number)
         ticket.SetFine()
 
         # Act
         report = ticket.report()
 
         # Assert
+        self.assertIn("Officer: John Doe", report)
+        self.assertIn("Badge Number: 12345", report)
         self.assertIn("Make: Toyota", report)
         self.assertIn("Color: Red", report)
         self.assertIn("Model: Camry", report)
