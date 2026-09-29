@@ -9,7 +9,7 @@ class Police_Officer:
         self.badge_number = badge_number
         self.car = car
         self.meter = meter
-        self.ticket = Parking_Ticket(0, car, meter)
+        self.ticket = Parking_Ticket(0, car, meter, name, badge_number)
 
     def Inspect(self):
         if self.car.min_parked > self.meter.min_purch:
