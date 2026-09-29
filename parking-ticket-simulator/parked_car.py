@@ -25,11 +25,11 @@ class Parked_Car:
 
     @make.setter
     def make(self, value):
-#        if not isinstance(value, str):
-#            raise TypeError("Make must be a string")
-#        if not value:
-#            raise ValueError("Make cannot be empty")
-        raise_error(value)
+        if not isinstance(value, str):
+            raise TypeError("Make must be a string")
+        if not value:
+            raise ValueError("Make cannot be empty")
+#        raise_error(value)
         self._make = value
 
     @property
@@ -68,11 +68,11 @@ class Parked_Car:
             raise ValueError("License number cannot be empty")
         self._lic_num = value
 
-    def raise_error(self, value):
-        if not isinstance(value, str):
-            raise TypeError("Make must be a string")
-        if not value:
-            raise ValueError("Make cannot be empty")
+#    def raise_error(self, value):
+#       if not isinstance(value, str):
+#            raise TypeError("Make must be a string")
+#        if not value:
+#            raise ValueError("Make cannot be empty")
 
 
 
