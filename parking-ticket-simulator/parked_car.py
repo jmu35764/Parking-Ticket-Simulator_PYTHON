@@ -69,7 +69,7 @@ class Parked_Car:
         self._lic_num = value
 
     def list(self):
-        return f"Make: {self.make}\n Color: {self.color}\n Model: {self.model}\n License Number: {self.lic_num}\n Minutes Parked: {self.min_parked}"
+        return f"Make: {self.make}\nColor: {self.color}\nModel: {self.model}\nLicense Number: {self.lic_num}\nMinutes Parked: {self.min_parked}"
 
 #    def raise_error(self, value):
 #       if not isinstance(value, str):
