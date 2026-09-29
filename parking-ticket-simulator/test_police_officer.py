@@ -12,6 +12,12 @@ class test_police_officer(unittest.TestCase):
         officer = Police_Officer("John Doe", "12345", car1, meter1)
         self.assertIsNone(officer.Inspect())
 
+    def test_parked_equals_meter(self):
+        car1 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 60)
+        meter1 = Parking_Meter(60)
+        officer = Police_Officer("John Doe", "12345", car1, meter1)
+        self.assertIsNone(officer.Inspect())
+
 
 
 
