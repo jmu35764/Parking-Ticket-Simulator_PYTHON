@@ -16,7 +16,7 @@ class Parking_Meter():
         self._min_purch = value
 
     def list(self):
-        return f"\nMinutes Purchased: {self.min_purch}"
+        return f"Minutes Purchased: {self.min_purch}"
 
 
 
