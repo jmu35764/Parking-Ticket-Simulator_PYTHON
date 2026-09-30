@@ -11,6 +11,7 @@ def main():
     Officer1 = Police_Officer("John Doe", "12345", car1, meter1)
     print(Officer1.Inspect())
 
+    #Car with no violation
     car2 = Parked_Car("Ford", "Black", "Fusion", "DEF456", 30)
     meter2 = Parking_Meter(60)
     Officer2 = Police_Officer("Max Payne", "67891", car2, meter2)
