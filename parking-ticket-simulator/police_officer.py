@@ -18,7 +18,7 @@ class Police_Officer:
             #report = ticket.report
             return ticket.report()
         else:
-            return None
+            return "There is no violation"
 
     def list(self):
         return f"\nOfficer Name: {self.name}\nBadge Number: {self.badge_number}"
