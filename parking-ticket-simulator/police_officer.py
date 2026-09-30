@@ -18,7 +18,7 @@ class Police_Officer:
             #report = ticket.report
             return ticket.report()
         else:
-            return "\nThere is no violation"
+            return "\nThere is no violation" and None
 
 
 
