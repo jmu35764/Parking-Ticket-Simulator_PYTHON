@@ -28,7 +28,7 @@ class Parking_Ticket:
         return self.fine
 
     def report(self):
-        return f"Officer: {self.officer_name}\nBadge Number: {self.off_num}\n{self.car.list()}\n{self.meter.list()}\nFine: ${self.fine}"
+        return f"\nOfficer: {self.officer_name}\nBadge Number: {self.off_num}\n{self.car.list()}\n{self.meter.list()}\nFine: ${self.fine}"
 
 
 
