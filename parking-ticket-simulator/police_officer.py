@@ -9,7 +9,6 @@ class Police_Officer:
         self.badge_number = badge_number
         self.car = car
         self.meter = meter
-        self.report = report
         #self.ticket = Parking_Ticket(0, car, meter, name, badge_number)
 
     def Inspect(self):
