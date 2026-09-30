@@ -24,7 +24,7 @@ class test_police_officer(unittest.TestCase):
         officer = Police_Officer("John Doe", "12345", car1, meter1)
         officer.Inspect()
         self.assertIsNotNone(officer.Inspect())
-        self.assertIn("Fine: $25", report)
+        self.assertIn("Fine: $25", ticket.report())
         #self.assertEqual(ticket.fine, 25)
 
     def test_illegal_minutes(self):
