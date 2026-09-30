@@ -32,15 +32,15 @@ class test_police_officer(unittest.TestCase):
         meter1 = Parking_Meter(60)
         officer = Police_Officer("John Doe", "12345", car1, meter1)
         officer.Inspect()
-        self.assertIsInstance(ticket, Parking_Ticket)
-        self.assertEqual(ticket.fine, 35)
+        self.assertIsNotNone(officer.Inspect())
+        self.assertIn("Fine: $35", officer.Inspect())
 
         car2 = Parked_Car("Honda", "Blue", "Civic", "XYZ789", 181)
         meter2 = Parking_Meter(60)
         officer2 = Police_Officer("Jane Smith", "67890", car2, meter2)
-        ticket2 = officer2.Inspect()
-        self.assertIsInstance(ticket2, Parking_Ticket)
-        self.assertEqual(ticket2.fine, 45)
+        officer2.Inspect()
+        self.assertIsNotNone(officer2.Inspect())
+        self.assertIn("Fine: $45", officer2.Inspect())
 
 
 
