@@ -20,8 +20,8 @@ class Police_Officer:
         else:
             return "\nThere is no violation"
 
-    def list(self):
-        return f"\nOfficer Name: {self.name}\nBadge Number: {self.badge_number}"
+    #def list(self):
+     #   return f"\nOfficer Name: {self.name}\nBadge Number: {self.badge_number}"
 
 
 
