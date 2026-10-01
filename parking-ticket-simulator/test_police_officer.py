@@ -27,6 +27,14 @@ class test_police_officer(unittest.TestCase):
         self.assertIn("Fine: $25", officer.Inspect())
         #self.assertEqual(ticket.fine, 25)
 
+    def test_one_hour_over(self):
+        car2 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 120)
+        meter2 = Parking_Meter(60)
+        officer2 = Police_Officer("John Doe", "12345", car2, meter2)
+        officer2.Inspect()
+        self.assertIsNotNone(officer2.Inspect())
+        self.assertIn("Fine: $25", officer2.Inspect())
+
     def test_illegal_minutes(self):
         car1 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 121)
         meter1 = Parking_Meter(60)
