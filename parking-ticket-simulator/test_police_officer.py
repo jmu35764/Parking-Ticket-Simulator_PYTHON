@@ -43,12 +43,19 @@ class test_police_officer(unittest.TestCase):
         self.assertIsNotNone(officer.Inspect())
         self.assertIn("Fine: $35", officer.Inspect())
 
-        car2 = Parked_Car("Honda", "Blue", "Civic", "XYZ789", 181)
+        car2 = Parked_Car("Toyota", "Red", "Camry", "ABC123", 180)
         meter2 = Parking_Meter(60)
-        officer2 = Police_Officer("Jane Smith", "67890", car2, meter2)
+        officer2 = Police_Officer("John Doe", "12345", car2, meter2)
         officer2.Inspect()
         self.assertIsNotNone(officer2.Inspect())
-        self.assertIn("Fine: $45", officer2.Inspect())
+        self.assertIn("Fine: $35", officer2 .Inspect())
+
+        car3 = Parked_Car("Honda", "Blue", "Civic", "XYZ789", 181)
+        meter3 = Parking_Meter(60)
+        officer3 = Police_Officer("Jane Smith", "67890", car3, meter3)
+        officer3.Inspect()
+        self.assertIsNotNone(officer3.Inspect())
+        self.assertIn("Fine: $45", officer3.Inspect())
 
 
 
