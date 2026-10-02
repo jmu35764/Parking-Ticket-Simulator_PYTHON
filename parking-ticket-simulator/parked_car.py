@@ -72,7 +72,18 @@ class Parked_Car:
         return self._lic_num
 
     @lic_num.setter
-    """Makes sure the license number is a valid string"""
+    """Makes sure the license number is a valid string
+
+    Args: 
+    value (str): The license number to setvalue to
+
+    Returns:
+    None
+
+    Raises:
+    TypeError : If the value is not a string
+    ValueError: If the value is an empty string
+    """
     def lic_num(self, value):
         if not isinstance(value, str):
             raise TypeError("License number must be a string")
