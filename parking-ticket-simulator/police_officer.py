@@ -13,9 +13,14 @@ class Police_Officer:
         self.meter = meter
 
     def Inspect(self):
-    """Checks the parked car for violations
-    If there is no violatin, no ticket will
-    be created
+    """Checks the parked car for violations using its assocatiated parking meter
+
+    Args: 
+        car: Parked_Car: The parked car to be inspected
+        meter: Parking_Meter: The parking meter associated with the parked car
+
+    Returns: 
+        Parking_Ticket or None: The ticket if a violation is found, otherwise None
     """
         if self.car.min_parked > self.meter.min_purch:
             #A ticket is not created internally so that it can exist on its own
