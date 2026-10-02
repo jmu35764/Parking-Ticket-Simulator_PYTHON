@@ -6,6 +6,7 @@ import math
 
 
 class Parking_Ticket:
+    """Represents a parking ticket if one is made"""
     def __init__(self, fine: int = 0, car: Parked_Car = None, meter: Parking_Meter = None, officer_name: str = None, off_num: str = None) -> None:
         #self.fine = self.SetFine()
         self.car = car
@@ -15,19 +16,27 @@ class Parking_Ticket:
         self.off_num = off_num
 
     def SetFine(self) -> int:
+    """Sets the value of the fine based on the parking violation"""
         if self.car is None or self.meter is None:
             return None
-
+        
+        #If there is no violation, than the fine is zero
         over = self.car.min_parked - self.meter.min_purch
         if over <= 0:
             self.fine = 0
+        
+        #If there is a violation but its less than or equal to 60 minutes, the fine is $25
         elif over > 0 and over <= 60:
             self.fine = 25
+
+        #If the violation is greater than 60 minutes, the fine is $25 plus $10 for every hour or part of an hour over 60 minutes
         else:
             self.fine = 25 + math.ceil((over-60) / 60) * 10
         return self.fine
 
+
     def report(self):
+    """Prints a report"""
         return f"\nOfficer: {self.officer_name}\nBadge Number: {self.off_num}\n{self.car.list()}\n{self.meter.list()}\nFine: ${self.fine}"
 
 
