@@ -11,7 +11,6 @@ class Police_Officer:
         self.badge_number = badge_number
         self.car = car
         self.meter = meter
-        #self.ticket = Parking_Ticket(0, car, meter, name, badge_number)
 
     def Inspect(self):
     """Checks the parked car for violations
@@ -19,6 +18,7 @@ class Police_Officer:
     be created
     """
         if self.car.min_parked > self.meter.min_purch:
+            #A ticket is not created internally so that it can exist on its own
             ticket = Parking_Ticket(0, self.car, self.meter, self.name, self.badge_number)
             ticket.SetFine()
             #report = ticket.report

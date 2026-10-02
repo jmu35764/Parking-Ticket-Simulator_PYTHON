@@ -36,7 +36,6 @@ class Parked_Car:
             raise TypeError("Make must be a string")
         if not value:
             raise ValueError("Make cannot be empty")
-#        raise_error(value)
         self._make = value
 
     @property
@@ -85,16 +84,4 @@ class Parked_Car:
     def list(self):
         return f"Make: {self.make}\nColor: {self.color}\nModel: {self.model}\nLicense Number: {self.lic_num}\nMinutes Parked: {self.min_parked}"
 
-#    def raise_error(self, value):
-#       if not isinstance(value, str):
-#            raise TypeError("Make must be a string")
-#        if not value:
-#            raise ValueError("Make cannot be empty")
-
-
-
-
-
-
-
-        
+      
